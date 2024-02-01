@@ -1,7 +1,10 @@
 package ru.appline.controller;
 
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import ru.appline.logic.Compas;
 import ru.appline.logic.SideOfCompas;
 
@@ -37,7 +40,7 @@ public class Controller {
     @GetMapping(value = "/getSide", consumes = "application/json", produces = "application/json")
     public String getSide(@RequestBody Map<String, Integer> degree) {
 
-        return "\n\"Side\": " + compas.getSideOfCompas(degree.get("Degree"));
+        return  compas.getSideOfCompas(degree.get("Degree"));
 
     }
 

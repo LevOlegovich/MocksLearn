@@ -7,10 +7,10 @@ package ru.appline.logic;
         private int endDegree;
 
 
-        public SideOfCompas(String side, int rangeStart, int rangeEnd) {
+        public SideOfCompas(String side, int startDegree, int endDegree) {
             this.side = side;
-            this.startDegree = rangeStart;
-            this.endDegree = rangeEnd;
+            this.startDegree = startDegree;
+            this.endDegree = endDegree;
         }
 
         public String getSide() {
